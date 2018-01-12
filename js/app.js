@@ -1,15 +1,33 @@
 var students = [];
+/*var objStudent = {};*/
 
 function getStudentsList() {
     // TO DO: Retornar la lista de estudiantes
-   
+    return students;
+
 }
 
 function studentAdd() {
     // TO DO: Preguntar al usuario por el nombre, puntos técnicos y puntos de HSE de un estudiante
     // Hint: El estudiante debe ser agregado a la lista de estudiantes
     // TO DO: Retornar el estudiante recientemente creado
-   
+    var name = prompt("Ingresa en nombre de la estudiante:");
+    var techPoints = parseInt(prompt("Ingresa puntos téctnicos"));
+    var hsePoints = parseInt(prompt("Ingresa puntos de HSE"));
+    var objStudent = {
+      "name" : name,
+      "techPoints" : techPoints,
+      "hsePoints" : hsePoints,
+    }
+    /*objStudent["name"] = name;
+    objStudent["techPoints"] = techPoints;
+    objStudent["hsePoints"] = hsePoints;*/
+    console.log(objStudent);
+
+    students.push(objStudent);
+    console.log(students);
+    return objStudent;
+
 }
 
 function show(student) {
